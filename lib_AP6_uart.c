@@ -12,9 +12,8 @@
 
 /* Directives de compilation - Macros		*/
 
-
 /* Déclarations des variables globales 	*/
-uint8_t CarRec = 'A';   /**< Init CarRec variable with dummy value ('A')    */
+uint8_t CarRec = 'A';   /**< Définition and init CarRec variable with dummy value ('A')    */
 
 /*	Implémentation du code */
 //------------------------------------------------------------------------------
