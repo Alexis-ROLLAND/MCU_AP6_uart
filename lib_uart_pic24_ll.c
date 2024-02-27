@@ -7,7 +7,6 @@
  *
  */
 
-
 #include "lib_uart_pic24_ll.h" // Inclusion du fichier .h  renommé
 
 /* Directives de compilation - Macros		*/
@@ -16,10 +15,11 @@
 
 /*	Implémentation du code */
 //------------------------------------------------------------------------------
-uart_err_t  uart_init(const uart_config_t *pUartCFG, uart_desc_t *pUart){
+uart_err_t  uart_init(uart_desc_t *pUart, const uart_config_t *pUartCFG){
     if (pUartCFG->RxIrqPrio > 7) return UART_BAD_PRIO;
+    pUart->RxIrqPrio = pUartCFG->RxIrqPrio;
     
-    switch(pUartCFG->uartID){
+        switch(pUartCFG->uartID){
         case _UART1:
             pUart->pUxBRG = (uint16_t*)&U1BRG;
             pUart->pUxMODE = (uint16_t*)&U1MODE;
@@ -46,7 +46,6 @@ uart_err_t  uart_init(const uart_config_t *pUartCFG, uart_desc_t *pUart){
     }
     
     pUart->uartID = pUartCFG->uartID;
-    pUart->RxIrqPrio = pUartCFG->RxIrqPrio;
     *(pUart->pUxBRG) = pUartCFG->UxBRG;
     *(pUart->pUxMODE) = pUartCFG->UxMODE;
     *(pUart->pUxSTA) = pUartCFG->UxSTA;

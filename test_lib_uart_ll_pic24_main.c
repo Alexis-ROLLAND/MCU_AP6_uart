@@ -34,25 +34,18 @@
 
 /* Directives de compilation - Macros		*/
 
-
-
 /* Déclarations des variables globales 	*/
-
-
-
 
 /* Programme Principal			*/
 int main(void)
 {
 // Variables locales au main
 
-
-
 Initialiser();		// Appel fonction d'initialisation
 
 while(1)
     {
-
+    mainTask();
     }
 }					
 

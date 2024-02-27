@@ -18,6 +18,10 @@
 
 #include "lib_uart_pic24_ll.h"
 
+//#define TEST_PUTCH_BLOCKING_MODE
+//#define TEST_PUTS
+#define TEST_RX_ISR
+
 /**
  * @brief Global init function/task 
  * 
@@ -36,26 +40,7 @@ void Initialiser(void);
  * @return   
  *
  */
- 
- 
- /**
- * @brief  
- * 
- * @param	
- * 
- * @return   
- *
- */
- 
- /**
- * @brief  
- * 
- * @param	
- * 
- * @return   
- *
- */
- 
+void mainTask();
  
 
 

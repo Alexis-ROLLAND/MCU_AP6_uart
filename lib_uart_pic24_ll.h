@@ -32,10 +32,10 @@ typedef enum    {
  */
 typedef enum    {   
     UART_OK,            /**< Succes value */
-    UART_ERROR,         /**< Non specific Error */
     UART_UNKNOWN_UART,  /**< The UART ID is unknown  */
     UART_TX_FIFO_FULL,  /**< TX_FIFO is full */
-    UART_BAD_PRIO      /**< Interrupt priority level outside the 0-7 range */
+    UART_BAD_PRIO,      /**< Interrupt priority level outside the 0-7 range */
+    UART_ERROR          /**< Non specific Error */
 } uart_err_t; 
 
  /** Type uart_config_t
@@ -68,21 +68,21 @@ typedef struct{
 /**
  * @brief   Configuration d'un UART  
  * 
- * @param[in]   Adress of an uart_config_t variable (holding the desired configuration)  
- * @param[out]  Adress of an uart_desc_t variable (descriptor, set by the init function) 
+ * @param[out]  pUart : Adress of an uart_desc_t variable (descriptor, set by the init function) 
+ * @param[in]   pUartCFG : Adress of an uart_config_t variable (holding the desired configuration)  
  * 
  * @retval      UART_OK on success, 
  * @retval      UART_UNKNOWN_UART if the UART is not listed (_UART1 / _UART2)
  * @retval      UART_BAD_PRIO if the given priority is outside [0;7]
  */
-uart_err_t  uart_init(const uart_config_t *pUartCFG, uart_desc_t *pUart);
+uart_err_t  uart_init(uart_desc_t *pUart, const uart_config_t *pUartCFG);
 
  /**
   * @brief  Send one character on a choosen UART 
   * 
-  * @param[in]   Address of an initialized uart descriptor
-  * @param[in]   Character to send
-  * @param[in]   Send in blocking mode or non blocking mode 	
+  * @param[in]   pUart : Address of an initialized uart descriptor
+  * @param[in]   Car : Character to send
+  * @param[in]   BlockingMode : Send in blocking mode or non blocking mode 	
   *  
   * @return     UART_OK on success or UART_TX_FIFO_FULL in non blocking mode if Tx FIFO is full
   */
@@ -91,8 +91,8 @@ uart_err_t      uart_putch(const uart_desc_t *pUart, uint8_t Car, uart_tx_blocki
  /**
  * @brief  Sends a C Formatted string, blocking mode only
  * 
- * @param[in]   Address of an initialized uart descriptor
- * @param[in]   Address of the string to send	
+ * @param[in]   pUart : Address of an initialized uart descriptor
+ * @param[in]   pString : Address of the string to send	
  * 
  * @return   UART_OK
  */
