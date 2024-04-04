@@ -27,11 +27,11 @@
 void Initialiser(void);
 
 /**
- * @brief  
+ * @brief  Main Task - Must be called from the "while(1)"
  * 
- * @param	
+ * @param   none	
  * 
- * @return   
+ * @return   nothing
  *
  */
 void    mainTask(void);
