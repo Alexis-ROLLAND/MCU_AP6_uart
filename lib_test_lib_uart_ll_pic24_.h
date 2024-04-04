@@ -20,7 +20,7 @@
 
 #define TEST_PUTCH_BLOCKING_MODE
 //#define TEST_PUTS
-//define TEST_RX_ISR
+//#define TEST_RX_ISR
 
 /**
  * @brief Global init function/task 
