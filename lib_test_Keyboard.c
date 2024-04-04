@@ -76,7 +76,7 @@ void    mainTask(void){
     uart_puts(&ConsoleDevice,msg);
 }
 #endif
-
+//------------------------------------------------------------------------------
 const uint8_t   tabCar[13]={0,'1','2','3','4','5','6','7','8','9','*','0','#'};
 int8_t  Decode(uint8_t Code){
     if ( (Code & 0xE0) != 0xE0 ) return -1;
@@ -86,7 +86,7 @@ int8_t  Decode(uint8_t Code){
 
     return tabCar[Code];
 }
-
+//------------------------------------------------------------------------------
 void    getMulticodeSized(uint8_t *pCode, uint8_t NbCar,uint8_t *pStr){
     uint8_t CodesRec = 0;
     while (CodesRec <= (NbCar-1)){
@@ -98,7 +98,7 @@ void    getMulticodeSized(uint8_t *pCode, uint8_t NbCar,uint8_t *pStr){
     pStr[NbCar] = '\0';
     return;
 }
-
+//------------------------------------------------------------------------------
 void    getMulticodeUnsized(uint8_t *pCode, uint8_t StopCode,uint8_t *pStr){
     uint8_t CodesRec = 0;
     uint8_t AsciiCode;
@@ -112,7 +112,7 @@ void    getMulticodeUnsized(uint8_t *pCode, uint8_t StopCode,uint8_t *pStr){
     pStr[CodesRec] = '\0';
     return;
 }
-
+//------------------------------------------------------------------------------
 // ISR for UART1 (Keyboard) 
 void _ISR __attribute__((no_auto_psv))  _U1RXInterrupt(void){ 
     CodeKeyboard = U1RXREG;            /**< retrieve received byte - mandatory */

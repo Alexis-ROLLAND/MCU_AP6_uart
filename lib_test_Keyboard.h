@@ -44,11 +44,18 @@ void Initialiser(void);
 void    mainTask(void);
  
  /**
- * @brief  
+ * @brief   Transcode function between raw "keyboard code" to ASCII code
+ *      Keyboard Code       ASCII
+ *      0xE1                '1'
+ *      0xE2                '2'
+ *      ...                 ...
+ *      0xEA                '*'
+ *      0xEB                '0'
+ *      0xEC                '#'
  * 
- * @param	
+ * @param[IN] : Code - Raw Keyboard Code	
  * 
- * @return   ASCII code or -1 (error)
+ * @return   ASCII code or -1 (error) if provided Code is incorrect( <0xE1 or >0xEC )
  *
  */
 int8_t  Decode(uint8_t Code); 
@@ -56,7 +63,7 @@ int8_t  Decode(uint8_t Code);
 /**
  * @brief   Receive codes until reception of 'StopCode' (ASCII), creates a 'C' string with ASCII values
  * 
- * @param[in] pCode : Address of the received code
+ * @param[in] pCode : Address of the received code (one byte)
  * @param[in] StopCode : Validation code (last code of the message) - ASCII value
  * @param[out] pStr : Address of the target string ('C' formatted)   	
  * 
@@ -70,7 +77,7 @@ void    getMulticodeUnsized(uint8_t *pCode, uint8_t StopCode,uint8_t *pStr);
 /**
  * @brief   Receive NbCar codes, creates a 'C' string with ASCII values
  * 
- * @param[in] pCode : Address of the received code
+ * @param[in] pCode : Address of the received code (one byte)
  * @param[in] NbCar : Number of characters to receive
  * @param[out] pStr : Address of the target string ('C' formatted)   	
  * 
