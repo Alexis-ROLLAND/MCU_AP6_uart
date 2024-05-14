@@ -32,7 +32,7 @@ void mainTask(void){
     while(U2STAbits.UTXBF);     /**< Wait while TX Buffer is Full   */
     U2TXREG = CarRec;           /**< Send Byte                      */
 }
-//------------------------------------------------------------------------------
+//  ------------------------------------------------------------------------------
 // ISR if UART2 is used
 void _ISR __attribute__((no_auto_psv))  _U2RXInterrupt(void){ 
     CarRec = U2RXREG;           /**< Get received byte update CarRec variable   */
