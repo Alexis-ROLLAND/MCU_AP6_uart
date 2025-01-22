@@ -63,9 +63,9 @@ int8_t  Decode(uint8_t Code);
 /**
  * @brief   Receive codes until reception of 'StopCode' (ASCII), creates a 'C' string with ASCII values
  * 
- * @param[in] pCode : Address of the received code (one byte)
- * @param[in] StopCode : Validation code (last code of the message) - ASCII value
- * @param[out] pStr : Address of the target string ('C' formatted)   	
+ * @param[in]   pCode : Address of the received code (one byte)
+ * @param       StopCode : Validation code (last code of the message) - ASCII value
+ * @param[out]  pStr : Address of the target string ('C' formatted)   	
  * 
  * @return   void
  *
@@ -77,9 +77,9 @@ void    getMulticodeUnsized(uint8_t *pCode, uint8_t StopCode,uint8_t *pStr);
 /**
  * @brief   Receive NbCar codes, creates a 'C' string with ASCII values
  * 
- * @param[in] pCode : Address of the received code (one byte)
- * @param[in] NbCar : Number of characters to receive
- * @param[out] pStr : Address of the target string ('C' formatted)   	
+ * @param[in]   pCode : Address of the received code (one byte)
+ * @param       NbCar : Number of characters to receive
+ * @param[out]  pStr : Address of the target string ('C' formatted)   	
  * 
  * @return   void
  *
