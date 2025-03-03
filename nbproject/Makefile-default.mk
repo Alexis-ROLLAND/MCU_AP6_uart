@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=AP6_uart_main.c lib_AP6_uart.c
+SOURCEFILES_QUOTED_IF_SPACED=lib_test_lib_uart_ll_pic24.c lib_uart_pic24_ll.c test_lib_uart_ll_pic24_main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/AP6_uart_main.o ${OBJECTDIR}/lib_AP6_uart.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/AP6_uart_main.o.d ${OBJECTDIR}/lib_AP6_uart.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o ${OBJECTDIR}/lib_uart_pic24_ll.o ${OBJECTDIR}/test_lib_uart_ll_pic24_main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o.d ${OBJECTDIR}/lib_uart_pic24_ll.o.d ${OBJECTDIR}/test_lib_uart_ll_pic24_main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/AP6_uart_main.o ${OBJECTDIR}/lib_AP6_uart.o
+OBJECTFILES=${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o ${OBJECTDIR}/lib_uart_pic24_ll.o ${OBJECTDIR}/test_lib_uart_ll_pic24_main.o
 
 # Source Files
-SOURCEFILES=AP6_uart_main.c lib_AP6_uart.c
+SOURCEFILES=lib_test_lib_uart_ll_pic24.c lib_uart_pic24_ll.c test_lib_uart_ll_pic24_main.c
 
 
 
@@ -89,30 +89,42 @@ MP_LINKER_FILE_OPTION=,--script=p24FJ128GA010.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/AP6_uart_main.o: AP6_uart_main.c  .generated_files/flags/default/296f79fde7a1fa89a298f815a53ac182ba175fae .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o: lib_test_lib_uart_ll_pic24.c  .generated_files/flags/default/d30fa2e1256afc6f1cd3b9f0acc9a519bc892904 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/AP6_uart_main.o.d 
-	@${RM} ${OBJECTDIR}/AP6_uart_main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  AP6_uart_main.c  -o ${OBJECTDIR}/AP6_uart_main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/AP6_uart_main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o.d 
+	@${RM} ${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_test_lib_uart_ll_pic24.c  -o ${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/lib_AP6_uart.o: lib_AP6_uart.c  .generated_files/flags/default/7633bf8ba03b59461a61b4d46ecd91e2a5114e22 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/lib_uart_pic24_ll.o: lib_uart_pic24_ll.c  .generated_files/flags/default/f68409a886acf6010366b838175fd625a62e542d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/lib_AP6_uart.o.d 
-	@${RM} ${OBJECTDIR}/lib_AP6_uart.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_AP6_uart.c  -o ${OBJECTDIR}/lib_AP6_uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_AP6_uart.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/lib_uart_pic24_ll.o.d 
+	@${RM} ${OBJECTDIR}/lib_uart_pic24_ll.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_uart_pic24_ll.c  -o ${OBJECTDIR}/lib_uart_pic24_ll.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_uart_pic24_ll.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/test_lib_uart_ll_pic24_main.o: test_lib_uart_ll_pic24_main.c  .generated_files/flags/default/92680f4815c286d7aa8aa559cb3bb6d8bb1a4f30 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/test_lib_uart_ll_pic24_main.o.d 
+	@${RM} ${OBJECTDIR}/test_lib_uart_ll_pic24_main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  test_lib_uart_ll_pic24_main.c  -o ${OBJECTDIR}/test_lib_uart_ll_pic24_main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/test_lib_uart_ll_pic24_main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
-${OBJECTDIR}/AP6_uart_main.o: AP6_uart_main.c  .generated_files/flags/default/df9064efd6d4e81b34d9fe41f3c8de30b57379b5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o: lib_test_lib_uart_ll_pic24.c  .generated_files/flags/default/b2bb118645e7622b524c8d471ec7e32c814df90a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/AP6_uart_main.o.d 
-	@${RM} ${OBJECTDIR}/AP6_uart_main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  AP6_uart_main.c  -o ${OBJECTDIR}/AP6_uart_main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/AP6_uart_main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o.d 
+	@${RM} ${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_test_lib_uart_ll_pic24.c  -o ${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_test_lib_uart_ll_pic24.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/lib_AP6_uart.o: lib_AP6_uart.c  .generated_files/flags/default/f8e27cd2636eb402e64de1294b6c49d7afc6d21b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/lib_uart_pic24_ll.o: lib_uart_pic24_ll.c  .generated_files/flags/default/682c309753d7295a4fd8398264e59860b6a7a072 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/lib_AP6_uart.o.d 
-	@${RM} ${OBJECTDIR}/lib_AP6_uart.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_AP6_uart.c  -o ${OBJECTDIR}/lib_AP6_uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_AP6_uart.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/lib_uart_pic24_ll.o.d 
+	@${RM} ${OBJECTDIR}/lib_uart_pic24_ll.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_uart_pic24_ll.c  -o ${OBJECTDIR}/lib_uart_pic24_ll.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_uart_pic24_ll.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/test_lib_uart_ll_pic24_main.o: test_lib_uart_ll_pic24_main.c  .generated_files/flags/default/72eb9902d0344ecdfcd7ce4dce6e048b5d1b0b37 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/test_lib_uart_ll_pic24_main.o.d 
+	@${RM} ${OBJECTDIR}/test_lib_uart_ll_pic24_main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  test_lib_uart_ll_pic24_main.c  -o ${OBJECTDIR}/test_lib_uart_ll_pic24_main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/test_lib_uart_ll_pic24_main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
