@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>MUC_AP6_uart</name>
-            <creation-uuid>24a93fc2-b176-4746-a211-abe3a2e7cc05</creation-uuid>
+            <name>MCU_AP6</name>
+            <creation-uuid>550b0bb1-2775-47f1-829f-1db2748fa6db</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
