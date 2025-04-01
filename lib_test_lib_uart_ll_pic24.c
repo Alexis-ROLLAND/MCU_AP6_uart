@@ -7,7 +7,6 @@
  *
  */
 
-
 #include "lib_test_lib_uart_ll_pic24_.h" // Inclusion du fichier .h "Applicatif" renommé
 
 /* Directives de compilation - Macros		*/
