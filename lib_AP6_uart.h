@@ -3,8 +3,6 @@
  * @author 	Alexis ROLLAND
  * @date	
  * @brief 	
- *  
- *
  */
 #ifndef	__LIB_MCU_AP6_H__
 #define	__LIB_MCU_AP6_H__
