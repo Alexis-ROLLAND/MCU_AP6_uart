@@ -18,9 +18,11 @@
 
 #include "lib_uart_pic24_ll.h"
 
-#define TEST_PUTCH_BLOCKING_MODE
-//#define TEST_PUTS
-//define TEST_RX_ISR
+#define TEST_PUTCH_BLOCKING_MODE    1
+#define TEST_PUTS 2
+#define TEST_RX_ISR   3
+
+#define CURRENT_TEST    TEST_RX_ISR
 
 /**
  * @brief Global init function/task 
