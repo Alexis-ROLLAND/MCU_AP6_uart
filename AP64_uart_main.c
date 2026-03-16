@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file    AP64_uart_main.c
  * @author 	Alexis ROLLAND
- * @date	
+ * @date	2026-03
  * @brief 	
  *  
  *
  */
 
-#include "lib_AP6_uart.h"   // Inclusion du fichier .h "Applicatif" renommé
+#include "lib_AP64_uart.h"   // Inclusion du fichier .h "Applicatif" renommé
 
 /**
  * Insérer Ici les bits de configuration pour le MCU 						  
@@ -41,14 +41,12 @@
 
 
 /* Programme Principal			*/
-int main(void)
-{
+int main(void){
 // Variables locales au main
 
 Initialiser();		// Appel fonction d'initialisation
 
-while(1)
-    {
+while(1){
     mainTask();
     }
 }					

@@ -1,11 +1,11 @@
 /**
- * @file  
+ * @file    lib_AP64_uart.h
  * @author 	Alexis ROLLAND
- * @date	
+ * @date	2026-03
  * @brief 	
  */
-#ifndef	__LIB_MCU_AP6_H__
-#define	__LIB_MCU_AP6_H__
+#ifndef	__LIB_MCU_AP64_H__
+#define	__LIB_MCU_AP64_H__
 
 #ifndef FCY
 #define FCY 4000000UL
@@ -55,7 +55,7 @@ void    mainTask(void);
  
 
 
-#endif      /*  __LIB_MCU_AP6_H__   */
+#endif      /*  __LIB_MCU_AP64_H__   */
 
 
 

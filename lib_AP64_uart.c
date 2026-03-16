@@ -1,14 +1,14 @@
 /**
- * @file    
+ * @file    lib_AP64_uart.c
  * @author 	Alexis ROLLAND
- * @date	
+ * @date	2026-03
  * @brief 	
  *  
  *
  */
 
 
-#include "lib_AP6_uart.h" // Inclusion du fichier .h "Applicatif" renommé
+#include "lib_AP64_uart.h" // Inclusion du fichier .h "Applicatif" renommé
 
 /* Directives de compilation - Macros		*/
 

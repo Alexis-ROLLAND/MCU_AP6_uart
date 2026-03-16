@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=AP6_uart_main.c lib_AP6_uart.c
+SOURCEFILES_QUOTED_IF_SPACED=AP64_uart_main.c lib_AP64_uart.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/AP6_uart_main.o ${OBJECTDIR}/lib_AP6_uart.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/AP6_uart_main.o.d ${OBJECTDIR}/lib_AP6_uart.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/AP64_uart_main.o ${OBJECTDIR}/lib_AP64_uart.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/AP64_uart_main.o.d ${OBJECTDIR}/lib_AP64_uart.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/AP6_uart_main.o ${OBJECTDIR}/lib_AP6_uart.o
+OBJECTFILES=${OBJECTDIR}/AP64_uart_main.o ${OBJECTDIR}/lib_AP64_uart.o
 
 # Source Files
-SOURCEFILES=AP6_uart_main.c lib_AP6_uart.c
+SOURCEFILES=AP64_uart_main.c lib_AP64_uart.c
 
 
 
@@ -89,30 +89,30 @@ MP_LINKER_FILE_OPTION=,--script=p24FJ128GA010.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/AP6_uart_main.o: AP6_uart_main.c  .generated_files/flags/default/296f79fde7a1fa89a298f815a53ac182ba175fae .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/AP64_uart_main.o: AP64_uart_main.c  .generated_files/flags/default/15309d6a612fec59e92a5a25335e46ae8eebd76b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/AP6_uart_main.o.d 
-	@${RM} ${OBJECTDIR}/AP6_uart_main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  AP6_uart_main.c  -o ${OBJECTDIR}/AP6_uart_main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/AP6_uart_main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/AP64_uart_main.o.d 
+	@${RM} ${OBJECTDIR}/AP64_uart_main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  AP64_uart_main.c  -o ${OBJECTDIR}/AP64_uart_main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/AP64_uart_main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/lib_AP6_uart.o: lib_AP6_uart.c  .generated_files/flags/default/7633bf8ba03b59461a61b4d46ecd91e2a5114e22 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/lib_AP64_uart.o: lib_AP64_uart.c  .generated_files/flags/default/554c55c268c3f636c666db20bf4639565f8cd36c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/lib_AP6_uart.o.d 
-	@${RM} ${OBJECTDIR}/lib_AP6_uart.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_AP6_uart.c  -o ${OBJECTDIR}/lib_AP6_uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_AP6_uart.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/lib_AP64_uart.o.d 
+	@${RM} ${OBJECTDIR}/lib_AP64_uart.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_AP64_uart.c  -o ${OBJECTDIR}/lib_AP64_uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_AP64_uart.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
-${OBJECTDIR}/AP6_uart_main.o: AP6_uart_main.c  .generated_files/flags/default/df9064efd6d4e81b34d9fe41f3c8de30b57379b5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/AP64_uart_main.o: AP64_uart_main.c  .generated_files/flags/default/97b6b9db9741d354e295eed86df9cfe6e1007627 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/AP6_uart_main.o.d 
-	@${RM} ${OBJECTDIR}/AP6_uart_main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  AP6_uart_main.c  -o ${OBJECTDIR}/AP6_uart_main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/AP6_uart_main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/AP64_uart_main.o.d 
+	@${RM} ${OBJECTDIR}/AP64_uart_main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  AP64_uart_main.c  -o ${OBJECTDIR}/AP64_uart_main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/AP64_uart_main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/lib_AP6_uart.o: lib_AP6_uart.c  .generated_files/flags/default/f8e27cd2636eb402e64de1294b6c49d7afc6d21b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/lib_AP64_uart.o: lib_AP64_uart.c  .generated_files/flags/default/32e2e201956c273bc2f8e9bb875debebdf2d35ce .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/lib_AP6_uart.o.d 
-	@${RM} ${OBJECTDIR}/lib_AP6_uart.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_AP6_uart.c  -o ${OBJECTDIR}/lib_AP6_uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_AP6_uart.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/lib_AP64_uart.o.d 
+	@${RM} ${OBJECTDIR}/lib_AP64_uart.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  lib_AP64_uart.c  -o ${OBJECTDIR}/lib_AP64_uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lib_AP64_uart.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
