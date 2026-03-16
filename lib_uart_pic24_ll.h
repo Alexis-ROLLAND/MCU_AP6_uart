@@ -1,7 +1,7 @@
 /**
  * @file    lib_uart_pic24_ll.h 
  * @author 	Alexis ROLLAND
- * @date	2024-02
+ * @date	2026-03
  * @brief 	Header file for low level uart driver
  *          Target : PIC24 (PIC24FJ128GA010)
  */

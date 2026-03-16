@@ -18,7 +18,7 @@ uart_desc_t     myDevice;   /**< Device descriptor  */
 
 
 /*	Implémentation du code */
-#ifdef  TEST_PUTCH_BLOCKING_MODE
+#if  (CURRENT_TEST == TEST_PUTCH_BLOCKING_MODE)
 
 void Initialiser(void){
     
@@ -38,7 +38,7 @@ void _ISR __attribute__((no_auto_psv))  _U2RXInterrupt(void){
 
 #endif  /*  TEST_PUTCH_BLOCKING_MODE    */
 
-#ifdef  TEST_PUTS
+#if  (CURRENT_TEST == TEST_PUTS)
 
 void Initialiser(void){
     
@@ -48,17 +48,10 @@ void mainTask(void){
     
 }
 
-// ISR if UART2 is used - Must be defined because interrupt is automaticaly activated
-uint8_t Dummy;
-void _ISR __attribute__((no_auto_psv))  _U2RXInterrupt(void){ 
-    Dummy = U2RXREG;            /**< retrieve received byte - mandatory */
-    IFS1bits.U2RXIF = 0;        /**< Clear IF ( ack interrupt )         */
-}
-
 #endif  /*  TEST_PUTS    */
 
 
-#ifdef  TEST_RX_ISR
+#if  (CURRENT_TEST == TEST_RX_ISR)
 uint8_t     CarRec = 0;
 void Initialiser(void){
     

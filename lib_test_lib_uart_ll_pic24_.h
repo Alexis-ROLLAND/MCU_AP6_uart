@@ -1,7 +1,7 @@
 /**
  * @file     
  * @author 	Alexis ROLLAND
- * @date	2024-02
+ * @date	2026-03
  * @brief 	
  *  
  *
@@ -18,9 +18,11 @@
 
 #include "lib_uart_pic24_ll.h"
 
-#define TEST_PUTCH_BLOCKING_MODE
-//#define TEST_PUTS
-//#define TEST_RX_ISR
+#define TEST_PUTCH_BLOCKING_MODE    1
+#define TEST_PUTS 2
+#define TEST_RX_ISR   3
+
+#define CURRENT_TEST    TEST_PUTCH_BLOCKING_MODE
 
 /**
  * @brief Global init function/task 
